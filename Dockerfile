@@ -1,7 +1,7 @@
 FROM chriskypri/workhorse-r-prerequisite
 
 RUN git clone https://github.com/ChristK/workHORSE.git temp
-RUN cp -rvf temp/* workHORSE/
+RUN cp -rvf temp/* /root/workHORSE/
 RUN rm -rf temp
 
 # following already exists on pworkhorse-r-prerequisite
@@ -14,9 +14,9 @@ COPY Rprofile.site /usr/lib/R/etc/
 RUN mkdir /mnt/storage_fast/
 RUN mkdir /mnt/storage_fast/synthpop/
 
-RUN R -e 'remotes::install_local("/workHORSE/Rpackage/workHORSE_model_pkg/", force = TRUE)'
+RUN R -e 'remotes::install_local("/root/workHORSE/Rpackage/workHORSE_model_pkg/", force = TRUE)'
 
 EXPOSE 3838
 
 CMD ["R", "-e", "chooseCRANmirror(ind=1); \
-                 shiny::runApp('/workHORSE') "]
+                 shiny::runApp('/root/workHORSE') "]
