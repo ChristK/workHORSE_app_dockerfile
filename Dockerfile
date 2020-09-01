@@ -16,7 +16,7 @@ RUN mkdir /mnt/storage_fast/synthpop/
 
 RUN R -e 'remotes::install_local("/root/workHORSE/Rpackage/workHORSE_model_pkg/", force = TRUE)'
 
-EXPOSE 3838
+EXPOSE 9898
 
 CMD ["R", "-e", "chooseCRANmirror(ind=1); \
                  shiny::runApp('/root/workHORSE', port = 9898) "]
