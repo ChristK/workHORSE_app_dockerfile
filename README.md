@@ -4,7 +4,7 @@ This repo hosts the dockerfile for the deployment of the [workHORSE app](https:/
 
 Every time a change is pushed on this repo a new docker container is built automatically at dockerhub. 
 
-To install and push to dockerhub manually on would do,
+To install and push to dockerhub manually
 ```bash
 sudo docker build -t [docker-USERNAME]/workhorse-app . # replace [docker-USERNAME] with your docker usename
 sudo docker login
