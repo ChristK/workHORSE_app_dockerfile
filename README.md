@@ -6,7 +6,7 @@ Every time a change is pushed on this repo a new docker container is built autom
 
 To install and push to dockerhub manually
 ```bash
-sudo docker build -t [docker-USERNAME]/workhorse-app . # replace [docker-USERNAME] with your docker usename
+sudo docker build --no-cache -t [docker-USERNAME]/workhorse-app . # replace [docker-USERNAME] with your docker usename
 sudo docker login
 sudo docker push [docker-USERNAME]/workhorse-app . # replace [docker-USERNAME] with your docker usename
 ```
