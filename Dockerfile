@@ -7,7 +7,7 @@ RUN git clone https://github.com/ChristK/workHORSE.git /root/workHORSE/
 RUN mkdir /mnt/storage_fast/
 RUN mkdir /mnt/storage_fast/synthpop/
 RUN R -e 'remotes::install_local("/root/workHORSE/Rpackage/workHORSE_model_pkg/")'
-RUN Rscript /root/workHORSE/gh_deploy.R
+RUN Rscript '/root/workHORSE/gh_deploy.R'
 
 EXPOSE 9898
 CMD R -e 'shiny::runApp("/root/workHORSE/", port = 9898, host = "0.0.0.0", launch.browser = FALSE)'
