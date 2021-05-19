@@ -1,6 +1,6 @@
-FROM chriskypri/workhorse-r-prerequisite
+FROM chriskypri/workhorse-r-prerequisite:stable
 LABEL maintainer "Chris Kypridemos <ckyprid@liverpool.ac.uk>"
-RUN git clone https://github.com/ChristK/workHORSE.git temp
+RUN git clone --branch stable https://github.com/ChristK/workHORSE.git temp
 RUN cp -rvf temp/* /root/workHORSE/
 RUN rm -rf temp
 RUN mkdir /mnt/storage_fast/
