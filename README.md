@@ -1,6 +1,6 @@
 # workHORSE app (stable) dockerfile
 
-This repo hosts the dockerfile for the deployment of the stable version of [workHORSE app](https://github.com/ChristK/workHORSE/).
+This repo hosts the dockerfile for the deployment of the [workHORSE app](https://github.com/ChristK/workHORSE/).
 
 Every time a change is pushed on this repo a new docker container is built automatically at dockerhub. 
 
