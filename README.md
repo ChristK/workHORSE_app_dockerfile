@@ -1,4 +1,4 @@
-# workHORSE app (stable) dockerfile
+# workHORSE app (HF-REAL) dockerfile
 
 This repo hosts the dockerfile for the deployment of the [workHORSE app](https://github.com/ChristK/workHORSE/).
 
