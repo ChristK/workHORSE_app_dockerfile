@@ -3,7 +3,7 @@ LABEL maintainer "Chris Kypridemos <ckyprid@liverpool.ac.uk>"
 RUN git clone https://github.com/ChristK/workHORSE.git /root/workHORSE/
 RUN mkdir /mnt/storage_fast/
 RUN mkdir /mnt/storage_fast/synthpop/
-RUN R -e 'remotes::install_local("/root/workHORSE/Rpackage/workHORSE_model_pkg/")'
+RUN R -e 'remotes::install_local("/root/workHORSE/Rpackage/workHORSE_model_pkg/", upgrade = "never")'
 RUN Rscript /root/workHORSE/gh_deploy.R "/root/workHORSE"
 
 EXPOSE 9898
